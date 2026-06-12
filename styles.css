@@ -187,11 +187,32 @@ main {
 /* ============ Hero ============ */
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: clamp(100px, 20vh, 170px) 0 clamp(40px, 8vh, 64px);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(7, 7, 10, 0.52) 0%, rgba(7, 7, 10, 0.88) 50%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(7, 7, 10, 0.3) 0%, transparent 50%, rgba(7, 7, 10, 0.3) 100%),
+    url("bg.jpg") center center / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(800px circle at 50% 70%, rgba(91, 184, 212, 0.06) 0%, transparent 60%);
 }
 
 .logo {
@@ -259,8 +280,29 @@ main {
 /* ============ Page hero (download) ============ */
 
 .page-hero {
+  position: relative;
   padding: clamp(88px, 16vh, 140px) 0 48px;
   text-align: center;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(7, 7, 10, 0.45) 0%, rgba(7, 7, 10, 0.92) 60%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(7, 7, 10, 0.25) 0%, transparent 50%, rgba(7, 7, 10, 0.25) 100%),
+    url("bg.jpg") center 20% / cover no-repeat;
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(600px circle at 50% 80%, rgba(91, 184, 212, 0.05) 0%, transparent 60%);
 }
 
 .page-title {
@@ -695,6 +737,13 @@ main {
 
   .hero {
     padding-top: clamp(80px, 16vh, 120px);
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(7, 7, 10, 0.45) 0%, rgba(7, 7, 10, 0.88) 50%, var(--bg) 100%),
+      linear-gradient(90deg, rgba(7, 7, 10, 0.25) 0%, transparent 50%, rgba(7, 7, 10, 0.25) 100%),
+      url("bg.jpg") center 30% / cover no-repeat;
   }
 
   .page-hero {
