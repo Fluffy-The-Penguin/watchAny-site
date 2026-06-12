@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>watchAny</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="" width="28" height="28">
+        <span>watchAny</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="index.html#guide">Guide</a></li>
+        <li><a href="index.html#features">Features</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <header class="hero" id="hero">
+        <img src="logo.png" alt="watchAny logo" class="logo" loading="lazy">
+        <h1 class="title">watchAny</h1>
+        <p class="subtitle">Anime, manga, movies &mdash; all in one desktop app.</p>
+        <div class="hero-actions">
+          <a href="download.html" class="btn primary">Download</a>
+          <a href="index.html#guide" class="btn secondary">Setup Guide</a>
+        </div>
+      </header>
+
+      <section class="guide" id="guide">
+        <h2 class="section-title">Setup Guide</h2>
+        <div class="guide-steps">
+
+          <div class="guide-step" data-delay="0">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Install the app</h3>
+              <p>Run the setup <code>.exe</code> and follow the installer. The package includes the desktop app, Electron runtime, icon assets, and the bundled runtime needed by manga extensions. Normal users do not need Node.js, npm, Java, or any additional tooling.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" data-delay="100">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Add your first sources</h3>
+              <p>watchAny does not ship pre-installed third-party sources. Open <strong>Settings &gt; Sources</strong> and choose the tab for the content type you want to add.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" data-delay="200">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Manga and manhwa</h3>
+              <p>Under <strong>Sources &gt; Manga</strong>, paste a Keiyoushi-compatible repository URL, click <strong>Validate &amp; add</strong>, then install the extensions you want. Only install extensions from repositories you trust.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" data-delay="300">
+            <span class="step-number">04</span>
+            <div>
+              <h3>Movies, TV and anime streams</h3>
+              <p>Under <strong>Sources &gt; Media</strong>, paste any compatible media manifest URL for streams, torrents, catalogs, metadata, or subtitles. If the add-on requires setup, configure it first, then paste the configured manifest URL.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" data-delay="400">
+            <span class="step-number">05</span>
+            <div>
+              <h3>Start browsing</h3>
+              <p>Catalog add-ons appear in the Movies catalog dropdown after they are enabled. Stream and torrent add-ons appear on detail pages when a matching title is opened. Use the <strong>Search</strong> tab to find anime, manga, or movies by name.</p>
+            </div>
+          </div>
+
+          <div class="guide-step" data-delay="500">
+            <span class="step-number">06</span>
+            <div>
+              <h3>Optional cloud sync</h3>
+              <p>The app works fully offline and locally. If you want your library and progress to sync across devices, enable account sync in <strong>Settings &gt; Account</strong>. You can configure a custom sync server if needed.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+          <div class="feature" data-delay="0">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4>Anime and movies</h4>
+            <p>Stream or download using torrents, media manifests, and configured sources. Built-in playback with subtitle support from multiple providers.</p>
+          </div>
+          <div class="feature" data-delay="100">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="9" y1="9" x2="15" y2="9"/></svg>
+            </div>
+            <h4>Manga and manhwa</h4>
+            <p>Read with a full-featured reader that supports direction control, fit mode, zoom, border crop, background color, and continuous scrolling.</p>
+          </div>
+          <div class="feature" data-delay="200">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h4>Local library</h4>
+            <p>Track your progress across anime, manga, and movies with automatic chapter and episode tracking. Optional sync keeps your data safe across devices.</p>
+          </div>
+          <div class="feature" data-delay="300">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h4>Customizable</h4>
+            <p>Add third-party sources through Keiyoushi-compatible manga extensions and media add-ons. Configure torrent providers, subtitle services, and more.</p>
+          </div>
+          <div class="feature" data-delay="400">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4>Torrent streaming</h4>
+            <p>Stream anime and movies directly from torrents without waiting for a full download. Supports DHT, PEX, and magnet links with real-time playback.</p>
+          </div>
+          <div class="feature" data-delay="500">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h4>Downloads</h4>
+            <p>Download anime episodes, movies, and manga chapters for offline viewing. Manage active downloads and track queue progress from the Downloads page.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 watchAny &mdash; <a href="https://github.com/Fluffy-The-Penguin/watchAny-release">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
