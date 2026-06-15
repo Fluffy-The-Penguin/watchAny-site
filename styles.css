@@ -39,6 +39,10 @@
   background: rgba(245, 245, 247, 0.96);
 }
 
+[data-theme="light"] .nav-links a:hover {
+  background: rgba(0,0,0,0.04);
+}
+
 [data-theme="light"] .theme-toggle:hover {
   background: rgba(0,0,0,0.04);
 }
@@ -49,12 +53,54 @@
     linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
 }
 
+[data-theme="light"] .mockup-frame {
+  background: var(--surface);
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 20px 60px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .showcase-player {
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 20px 60px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .carousel-dot {
+  border-color: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.2);
+}
+
+[data-theme="light"] .carousel-dot:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+[data-theme="light"] .carousel-dot.active {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+[data-theme="light"] .btn.secondary:hover {
+  background: rgba(0,0,0,0.03);
+}
+
 [data-theme="light"] .card-meta span {
   background: rgba(0, 0, 0, 0.035);
 }
 
 [data-theme="light"] .guide-step code {
   background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .gallery-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+[data-theme="light"] .gallery-label {
+  background: rgba(255,255,255,0.85);
+  color: #111;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 html {
