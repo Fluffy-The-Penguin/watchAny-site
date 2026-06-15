@@ -114,3 +114,38 @@ if (carousel) {
 
   startAutoplay();
 }
+
+/* ============ Lightbox ============ */
+
+const lightbox = document.createElement("div");
+lightbox.className = "lightbox";
+lightbox.setAttribute("role", "dialog");
+lightbox.setAttribute("aria-label", "Image zoom");
+lightbox.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img class="lightbox-img" alt="">';
+document.body.appendChild(lightbox);
+const lightboxImg = lightbox.querySelector(".lightbox-img");
+
+document.querySelectorAll(".gallery-card img").forEach((img) => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox || e.target === lightboxImg) {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightbox.classList.contains("open")) {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+});
+lightbox.querySelector(".lightbox-close").addEventListener("click", () => {
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+});
