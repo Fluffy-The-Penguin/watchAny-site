@@ -277,6 +277,42 @@ main {
   transform: translateY(0);
 }
 
+.hero-mockup {
+  margin-top: 48px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease 0.7s, transform 0.8s ease 0.7s;
+}
+
+.hero-mockup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mockup-frame {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+  background: #1a1a24;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06),
+    0 20px 60px rgba(0,0,0,0.5);
+}
+
+.mockup-screen {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.mockup-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ============ Page hero (download) ============ */
 
 .page-hero {

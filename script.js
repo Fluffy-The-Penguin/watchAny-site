@@ -25,22 +25,26 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 /* ============ Download links ============ */
 
 async function populateDownloadLinks() {
+  const verTag = document.getElementById("version-tag");
   const btns = document.querySelectorAll(".btn[data-file]");
   try {
     const res = await fetch("https://api.github.com/repos/Fluffy-The-Penguin/watchAny-release/releases/latest");
     if (!res.ok) throw new Error("API error");
     const release = await res.json();
     const tag = release.tag_name;
+    const ver = tag.slice(1);
     const base = `https://github.com/Fluffy-The-Penguin/watchAny-release/releases/download/${tag}/`;
     btns.forEach((btn) => {
-      btn.href = base + btn.dataset.file + tag.slice(1) + ".exe";
+      btn.href = base + btn.dataset.file.replace("{v}", ver);
     });
+    if (verTag) verTag.textContent = `Latest: ${tag}`;
   } catch {
     btns.forEach((btn) => {
-      btn.href = "#";
+      if (btn.dataset.fallback) btn.href = btn.dataset.fallback;
       btn.textContent = "Check GitHub Releases";
       btn.classList.add("offline");
     });
+    if (verTag) verTag.textContent = "Offline — check GitHub";
   }
 }
 
@@ -48,7 +52,7 @@ populateDownloadLinks();
 
 /* ============ Scroll animations ============ */
 
-const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item";
+const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .hero-mockup, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item";
 
 const observer = new IntersectionObserver(
   (entries) => {
