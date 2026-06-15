@@ -52,7 +52,7 @@ populateDownloadLinks();
 
 /* ============ Scroll animations ============ */
 
-const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .hero-mockup, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item, .gallery-card";
+const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .hero-mockup, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item, .gallery-card, .gallery-section-title";
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -72,7 +72,8 @@ document.querySelectorAll(animatedSelectors).forEach((el) => {
     el.classList.contains("section-title") ||
     el.classList.contains("note") ||
     el.classList.contains("page-title") ||
-    el.classList.contains("page-subtitle")
+    el.classList.contains("page-subtitle") ||
+    el.classList.contains("gallery-section-title")
   ) {
     const delay = parseInt(el.dataset.delay, 10) || 0;
     setTimeout(() => el.classList.add("visible"), delay + 300);
@@ -148,4 +149,55 @@ document.addEventListener("keydown", (e) => {
 lightbox.querySelector(".lightbox-close").addEventListener("click", () => {
   lightbox.classList.remove("open");
   document.body.style.overflow = "";
+});
+
+/* ============ Theme toggle ============ */
+
+const themeBtn = document.getElementById("theme-toggle");
+const themeHint = document.getElementById("theme-hint");
+
+function getPreferredTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved) return saved;
+  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  if (themeBtn) themeBtn.textContent = theme === "dark" ? "🌙" : "☀️";
+  if (themeHint) themeHint.textContent = theme === "dark" ? "moon" : "sun";
+
+  // Swap all -dark/-light images
+  const suffix = theme === "dark" ? "dark" : "light";
+  const other = theme === "dark" ? "light" : "dark";
+  document.querySelectorAll("img[src$='-" + other + ".png'], img[src$='-" + other + ".jpg']").forEach((img) => {
+    img.src = img.src.replace("-" + other + ".", "-" + suffix + ".");
+  });
+  // Also handle <source> inside <video>
+  document.querySelectorAll("video source[src$='-" + other + ".png'], video source[src$='-" + other + ".jpg']").forEach((src) => {
+    src.src = src.src.replace("-" + other + ".", "-" + suffix + ".");
+  });
+  // Update poster
+  const video = document.querySelector(".hero-video");
+  if (video && video.poster) {
+    video.poster = video.poster.replace("-" + other + ".", "-" + suffix + ".");
+  }
+}
+
+const currentTheme = getPreferredTheme();
+setTheme(currentTheme);
+
+if (themeBtn) {
+  themeBtn.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    setTheme(next);
+  });
+}
+
+// Listen for system preference changes
+window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+  if (!localStorage.getItem("theme")) {
+    setTheme(e.matches ? "light" : "dark");
+  }
 });

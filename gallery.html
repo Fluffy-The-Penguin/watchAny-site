@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenshots &mdash; watchAny</title>
+  <meta name="description" content="Browse watchAny screenshots across Home, Anime, Manga, and Movies. Toggle dark/light mode.">
+  <meta name="theme-color" content="#07070a">
+  <meta property="og:title" content="watchAny Screenshots">
+  <meta property="og:description" content="Browse watchAny screenshots across Home, Anime, Manga, and Movies.">
+  <meta property="og:image" content="https://watchany.app/og-image.png">
+  <meta property="og:url" content="https://watchany.app/gallery">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="logo.png" alt="" width="28" height="28">
+        <span>watchAny</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/download">Download</a></li>
+        <li><a href="/gallery" class="active">Screenshots</a></li>
+        <li><a href="/#guide">Guide</a></li>
+        <li><a href="/#features">Features</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <header class="page-hero">
+        <h1 class="page-title">Screenshots</h1>
+        <p class="page-subtitle">Browse all app screens &mdash; click any image to zoom. Toggle dark/light mode with the <span id="theme-hint">moon</span> button above.</p>
+      </header>
+
+      <section class="gallery-page" id="gallery-page">
+
+        <div class="gallery-section">
+          <h2 class="gallery-section-title">Home</h2>
+          <div class="gallery-grid">
+            <div class="gallery-card featured" data-delay="0">
+              <img src="home-dark.png" alt="watchAny home screen" loading="lazy">
+              <span class="gallery-label">Home</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h2 class="gallery-section-title">Anime</h2>
+          <div class="gallery-grid">
+            <div class="gallery-card" data-delay="0">
+              <img src="anime-search-dark.png" alt="Anime search" loading="lazy">
+              <span class="gallery-label">Search</span>
+            </div>
+            <div class="gallery-card" data-delay="100">
+              <img src="anime-detail-1-dark.png" alt="Anime detail page" loading="lazy">
+              <span class="gallery-label">Detail</span>
+            </div>
+            <div class="gallery-card" data-delay="200">
+              <img src="anime-detail-2-dark.png" alt="Anime detail scrolling" loading="lazy">
+              <span class="gallery-label">Detail (scroll)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h2 class="gallery-section-title">Manga</h2>
+          <div class="gallery-grid">
+            <div class="gallery-card featured" data-delay="0">
+              <img src="manga-search-dark.png" alt="Manga search" loading="lazy">
+              <span class="gallery-label">Search</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-section">
+          <h2 class="gallery-section-title">Movies</h2>
+          <div class="gallery-grid">
+            <div class="gallery-card" data-delay="0">
+              <img src="movie-1-dark.png" alt="Movies page" loading="lazy">
+              <span class="gallery-label">Browse</span>
+            </div>
+            <div class="gallery-card" data-delay="100">
+              <img src="movie-2-dark.png" alt="Movie detail" loading="lazy">
+              <span class="gallery-label">Detail</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Created by <strong>Fluffy the Penguin</strong> &mdash; &copy; 2026 watchAny &mdash; <a href="https://github.com/Fluffy-The-Penguin/watchAny-release">GitHub</a></p>
+  </footer>
+
+</body>
+</html>

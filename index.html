@@ -34,9 +34,11 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="/" class="active">Home</a></li>
         <li><a href="/download">Download</a></li>
+        <li><a href="/gallery">Screenshots</a></li>
         <li><a href="/#guide">Guide</a></li>
         <li><a href="/#features">Features</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </div>
   </nav>
 
@@ -44,6 +46,9 @@
     <div class="container">
 
       <header class="hero" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="home-dark.png">
+          <source src="video.mp4" type="video/mp4">
+        </video>
         <img src="logo.png" alt="watchAny logo" class="logo">
         <h1 class="title">watchAny</h1>
         <p class="subtitle">Stream anime, read manga, watch movies &mdash; all in one extensible desktop app.</p>
@@ -56,16 +61,16 @@
             <div class="mockup-screen">
               <div class="carousel" id="screenshot-carousel" role="region" aria-label="App screenshots">
                 <div class="carousel-slide active">
-                  <img src="screenshot-home.png" alt="watchAny home screen" loading="lazy">
+                  <img src="home-dark.png" alt="watchAny home screen" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                  <img src="screenshot-anime.png" alt="watchAny anime search" loading="lazy">
+                  <img src="anime-search-dark.png" alt="watchAny anime search" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                  <img src="screenshot-manga.png" alt="watchAny manga reader" loading="lazy">
+                  <img src="manga-search-dark.png" alt="watchAny manga search" loading="lazy">
                 </div>
                 <div class="carousel-slide">
-                  <img src="screenshot-movies.png" alt="watchAny movies page" loading="lazy">
+                  <img src="movie-1-dark.png" alt="watchAny movies page" loading="lazy">
                 </div>
               </div>
               <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
@@ -78,28 +83,6 @@
           </div>
         </div>
       </header>
-
-      <section class="gallery" id="screenshots">
-        <h2 class="section-title">See It in Action</h2>
-        <div class="gallery-grid">
-          <div class="gallery-card" data-delay="0">
-            <img src="screenshot-home.png" alt="watchAny home screen" loading="lazy">
-            <span class="gallery-label">Home</span>
-          </div>
-          <div class="gallery-card" data-delay="100">
-            <img src="screenshot-anime.png" alt="watchAny anime search" loading="lazy">
-            <span class="gallery-label">Anime</span>
-          </div>
-          <div class="gallery-card" data-delay="200">
-            <img src="screenshot-manga.png" alt="watchAny manga reader" loading="lazy">
-            <span class="gallery-label">Manga</span>
-          </div>
-          <div class="gallery-card" data-delay="300">
-            <img src="screenshot-movies.png" alt="watchAny movies page" loading="lazy">
-            <span class="gallery-label">Movies</span>
-          </div>
-        </div>
-      </section>
 
       <section class="guide" id="guide">
         <h2 class="section-title">Setup Guide</h2>
