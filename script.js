@@ -52,7 +52,7 @@ populateDownloadLinks();
 
 /* ============ Scroll animations ============ */
 
-const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .hero-mockup, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item";
+const animatedSelectors = ".logo, .title, .subtitle, .hero-actions, .hero-mockup, .section-title, .note, .card, .guide-step, .feature, .page-title, .page-subtitle, .req-item, .gallery-card";
 
 const observer = new IntersectionObserver(
   (entries) => {
