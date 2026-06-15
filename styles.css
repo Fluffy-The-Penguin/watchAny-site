@@ -25,17 +25,12 @@
   --text-muted: #7d7d8a;
 }
 
-[data-theme="light"] .navbar {
-  background: rgba(245, 245, 247, 0.6);
-}
-
 [data-theme="light"] .navbar.scrolled {
-  background: rgba(245, 245, 247, 0.95);
   box-shadow: inset 0 -1px 0 var(--border);
 }
 
 [data-theme="light"] .nav-links {
-  background: rgba(245, 245, 247, 0.96);
+  background: var(--bg);
 }
 
 [data-theme="light"] .nav-links a:hover {
@@ -193,15 +188,12 @@ main {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(7, 7, 10, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
+  background: var(--bg);
+  transition: box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
   box-shadow: inset 0 -1px 0 var(--border);
-  background: rgba(7, 7, 10, 0.92);
 }
 
 .nav-inner {
