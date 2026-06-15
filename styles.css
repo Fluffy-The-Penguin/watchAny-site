@@ -26,8 +26,7 @@
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(245, 245, 247, 0.7);
-  border-bottom-color: rgba(0,0,0,0.06);
+  background: rgba(245, 245, 247, 0.6);
 }
 
 [data-theme="light"] .navbar.scrolled {
