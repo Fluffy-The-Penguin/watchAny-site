@@ -178,11 +178,12 @@ function setTheme(theme) {
   document.querySelectorAll("video source[src$='-" + other + ".png'], video source[src$='-" + other + ".jpg']").forEach((src) => {
     src.src = src.src.replace("-" + other + ".", "-" + suffix + ".");
   });
-  // Update poster
-  const video = document.querySelector(".hero-video");
-  if (video && video.poster) {
-    video.poster = video.poster.replace("-" + other + ".", "-" + suffix + ".");
-  }
+  // Update video poster
+  document.querySelectorAll("video[poster]").forEach((video) => {
+    if (video.poster.includes("-" + other + ".")) {
+      video.poster = video.poster.replace("-" + other + ".", "-" + suffix + ".");
+    }
+  });
 }
 
 const currentTheme = getPreferredTheme();
