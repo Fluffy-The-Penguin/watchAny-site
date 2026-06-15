@@ -80,3 +80,37 @@ document.querySelectorAll(animatedSelectors).forEach((el) => {
   }
   observer.observe(el);
 });
+
+/* ============ Screenshot carousel ============ */
+
+const carousel = document.getElementById("screenshot-carousel");
+if (carousel) {
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  const dots = document.querySelectorAll(".carousel-dot");
+  let current = 0;
+  let interval;
+
+  function goTo(index) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    dots[current].setAttribute("aria-selected", "false");
+    current = index;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+    dots[current].setAttribute("aria-selected", "true");
+  }
+
+  function startAutoplay() {
+    interval = setInterval(() => goTo((current + 1) % slides.length), 4000);
+  }
+  function stopAutoplay() { clearInterval(interval); }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => { goTo(i); stopAutoplay(); startAutoplay(); });
+  });
+
+  carousel.addEventListener("mouseenter", stopAutoplay);
+  carousel.addEventListener("mouseleave", startAutoplay);
+
+  startAutoplay();
+}

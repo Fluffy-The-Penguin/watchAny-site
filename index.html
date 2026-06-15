@@ -54,7 +54,26 @@
         <div class="hero-mockup">
           <div class="mockup-frame">
             <div class="mockup-screen">
-              <img src="screenshot.png" alt="watchAny app screenshot" loading="lazy">
+              <div class="carousel" id="screenshot-carousel" role="region" aria-label="App screenshots">
+                <div class="carousel-slide active">
+                  <img src="screenshot-home.png" alt="watchAny home screen" loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                  <img src="screenshot-anime.png" alt="watchAny anime search" loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                  <img src="screenshot-manga.png" alt="watchAny manga reader" loading="lazy">
+                </div>
+                <div class="carousel-slide">
+                  <img src="screenshot-movies.png" alt="watchAny movies page" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
+                <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Home screen" data-index="0"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Anime screen" data-index="1"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Manga screen" data-index="2"></button>
+                <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Movies screen" data-index="3"></button>
+              </div>
             </div>
           </div>
         </div>
