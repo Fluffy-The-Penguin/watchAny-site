@@ -47,7 +47,7 @@
 
       <header class="page-hero">
         <h1 class="page-title">Download</h1>
-        <p class="page-subtitle">Get the latest version of watchAny for Windows and Linux. <span id="version-tag">Checking for updates...</span></p>
+        <p class="page-subtitle">Get the latest version of watchAny for Windows, Linux, and macOS. <span id="version-tag">Checking for updates...</span></p>
       </header>
 
       <section class="downloads" id="downloads">
@@ -79,18 +79,6 @@
             <a href="https://github.com/Fluffy-The-Penguin/watchAny-release/releases" class="btn primary" download data-file="watchAny-{v}.exe" data-fallback="https://github.com/Fluffy-The-Penguin/watchAny-release/releases">Download Portable</a>
           </div>
 
-          <div class="card" data-delay="200">
-            <div class="card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            </div>
-            <h3>Web Installer</h3>
-            <p>Small downloader that fetches and opens the full setup. Requires internet access during the initial installation.</p>
-            <div class="card-meta">
-              <span>Windows x64</span>
-              <span>NSIS web installer</span>
-            </div>
-            <a href="https://github.com/Fluffy-The-Penguin/watchAny-release/releases" class="btn primary" download data-file="watchAny-Web-Setup-{v}.exe" data-fallback="https://github.com/Fluffy-The-Penguin/watchAny-release/releases">Download Web Installer</a>
-          </div>
         </div>
         <p class="note">Windows may show a SmartScreen warning because the app is not code-signed yet. Click <strong>More info</strong> then <strong>Run anyway</strong> to proceed.</p>
 
@@ -125,12 +113,42 @@
         <p class="note">Linux: make the AppImage executable with <code>chmod +x watchAny-*.AppImage</code></p>
       </section>
 
+      <h2 class="section-title">macOS</h2>
+      <div class="cards">
+        <div class="card" data-delay="0">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3>macOS (DMG)</h3>
+          <p>Disk image with drag-and-drop installer. Double-click to mount, then drag the app to your Applications folder.</p>
+          <div class="card-meta">
+            <span>macOS 12+</span>
+            <span>Universal (Intel &amp; Apple Silicon)</span>
+          </div>
+          <a href="https://github.com/Fluffy-The-Penguin/watchAny-release/releases" class="btn primary" download data-file="watchAny-{v}-mac-universal.dmg" data-fallback="https://github.com/Fluffy-The-Penguin/watchAny-release/releases">Download DMG</a>
+        </div>
+
+        <div class="card" data-delay="100">
+          <div class="card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <h3>macOS (ZIP)</h3>
+          <p>Portable archive. Extract and run from anywhere. Useful for advanced users and automation.</p>
+          <div class="card-meta">
+            <span>macOS 12+</span>
+            <span>Universal (Intel &amp; Apple Silicon)</span>
+          </div>
+          <a href="https://github.com/Fluffy-The-Penguin/watchAny-release/releases" class="btn primary" download data-file="watchAny-{v}-mac-universal.zip" data-fallback="https://github.com/Fluffy-The-Penguin/watchAny-release/releases">Download ZIP</a>
+        </div>
+      </div>
+      <p class="note">macOS: if the app is blocked, go to <strong>System Settings &rarr; Privacy &amp; Security</strong> and click <strong>Open Anyway</strong>.</p>
+
       <section class="sys-reqs">
         <h2 class="section-title">System Requirements</h2>
         <div class="reqs-grid">
           <div class="req-item">
             <span class="req-label">OS</span>
-            <span class="req-value">Windows 10 or later (x64) &mdash; Linux (most modern distros, x64)</span>
+            <span class="req-value">Windows 10 or later (x64) &mdash; Linux (most modern distros, x64) &mdash; macOS 12+ (Intel or Apple Silicon)</span>
           </div>
           <div class="req-item">
             <span class="req-label">RAM</span>
